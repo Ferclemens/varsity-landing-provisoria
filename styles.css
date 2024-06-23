@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Roboto-medium";
+  src: url(Roboto-Medium.ttf);
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -6,19 +10,23 @@ body {
   background-color: black;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
+  margin-top: 4rem;
+}
+h1,
+h3 {
+  font-family: "Roboto-medium";
+  color: whitesmoke;
+  text-align: center;
 }
 .socialmedia {
-  max-width: 800px;
+  max-width: 320px;
   height: auto;
   width: 70%;
 }
@@ -35,8 +43,44 @@ body {
 }
 .links-container a {
   align-self: center;
+  justify-self: center;
+  text-align: center;
 }
 a:hover {
   transition: 0.2s;
   transform: scale(1.2);
+}
+@media (max-width: 950px) {
+  .container {
+    margin-top: 1rem;
+  }
+  .socialmedia {
+    max-width: 200px;
+    height: auto;
+    width: 70%;
+  }
+  .links-container img {
+    height: auto;
+    width: 35%;
+    align-self: center;
+    justify-self: center;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    margin-top: 12rem;
+  }
+  .socialmedia {
+    max-width: 250px;
+    height: auto;
+    width: 100%;
+  }
+  h3 {
+    padding: 0 1rem;
+  }
+  .links-container img {
+    height: auto;
+    align-self: center;
+    justify-self: center;
+  }
 }
